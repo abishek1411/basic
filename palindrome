@@ -1,0 +1,26 @@
+package com.jsp.scann;
+
+import java.util.Scanner;
+
+public class Swap {
+	public static void swapping(int n)
+	{
+		int rev=0;
+		int res=n;
+		while(n>0)
+		{
+			int m=n%10;
+			rev=(rev*10)+m;
+			n=n/10;
+		}
+		System.out.println("Swapped number is= "+rev);
+	}
+	public static void main(String[] args) 
+	{
+	Scanner s=new Scanner(System.in);
+	System.out.print("enter the number to swapped: ");
+	int j=s.nextInt();
+	swapping(j);
+	}
+
+}
