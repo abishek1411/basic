@@ -1,0 +1,40 @@
+package com.jsp.scann;
+
+import java.util.Scanner;
+
+public class Print {
+	public static void countprime(int n)
+	{
+		int res=0;
+		int count=0;
+	    while(n>0)
+	    {
+	    	int rem=n%10;
+	    	for(int i=2;i<=rem-1;i++)
+	    	{
+	    		if(rem%i==0)
+	    		{
+	    			count++;
+	    		}
+	    	}
+	    	if(count==0 && rem!=1 && rem!=0)
+	    	{
+	    		res++;
+	    	}
+	    	else
+	    	{
+	    		count=0;
+	    	}
+	    	n=n/10;
+	    }
+	    System.out.println("total prime numbers are: "+res);
+	}
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the number");
+		int v=s.nextInt();
+		countprime(v);
+	}
+
+}
